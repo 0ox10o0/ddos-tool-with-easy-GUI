@@ -164,7 +164,7 @@ class DoSApp:
         # Check completion
         if self.total_requests and (self.success.get() + self.failed.get() >= self.total_requests):
             self.maybe_save_csv()
-            self.total_requests = 0  # reset so we don't save multiple times
+            self.total_requests = 0  
         self.master.after(200, self.update_gui)
 
 if __name__ == '__main__':
